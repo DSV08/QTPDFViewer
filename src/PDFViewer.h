@@ -1,7 +1,10 @@
-https://doc.qt.io/archives/qq/qq27-poppler.html
-https://wiki.qt.io/Handling_PDF#Using_QtPDF_2
-https://wiki.qt.io/Exporting_a_document_to_PDF
-https://github.com/qt-labs/qtpdf/blob/dev/examples/pdf/pdfviewer/mainwindow.cpp
+//https://doc.qt.io/archives/qq/qq27-poppler.html
+//https://wiki.qt.io/Handling_PDF#Using_QtPDF_2
+//https://wiki.qt.io/Exporting_a_document_to_PDF
+//https://github.com/qt-labs/qtpdf/blob/dev/examples/pdf/pdfviewer/mainwindow.cpp
+//https://doc.qt.io/archives/qt-4.8/qdesktopservices.html#details
+//https://doc.qt.io/qtcreator/creator-project-qmake-libraries.html
+//https://medium.com/@ProgRockRec/power-of-qt-making-a-pdf-viewer-desktop-application-in-a-few-hours-14cfc3a1c9ae
 
 
 #pragma once
@@ -9,6 +12,9 @@ https://github.com/qt-labs/qtpdf/blob/dev/examples/pdf/pdfviewer/mainwindow.cpp
 #include <QtWidgets/QMainWindow>
 #include "ui_PDFViewer.h"
 #include <QPrinter>
+#include <QDir>
+#include <QPainter>
+#include <QFileDialog>
 
 namespace Ui 
 {
@@ -35,7 +41,7 @@ public:
 	*/
 	~PDFViewer();
 
-
+	
 	//Necessário?
 	/*!
 	* @brief Método Get.
@@ -87,12 +93,12 @@ private:
 private slots:
 
 	/*!
-	* @brief Slot abrir
-	* Esse slot é excecutado quando a opção abrir é escolhida, permitindo ao usuario escolher um PDF
+	* @brief Slot abrirPDF
+	* Esse slot é excecutado quando a opção abrir PDF é escolhida, permitindo ao usuario escolher um PDF
 	* que será aberto para visualização
 	*
 	*/
-	void slotAbrir();
+	void slotAbrirPDF();
 
 	/*!
 	* @brief printpreview
